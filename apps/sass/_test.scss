@@ -1,38 +1,45 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
 html{
     scroll-behavior: smooth;
-}
-body{
-    background-color: beige;
-    min-height: 100vh;
-    overflow-y: hidden;
-    overflow-x: scroll;
-}
-.div1{
-    background-color: green;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-.div2{
-    background-color: lightblue;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-.div3{
-    background-color: pink;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-.div4{
-    background-color: orange;
-    min-height: 100vh;
-    min-width: 100vw;
+    font-size: 62.5%;
 }
 
-.wrapper{
+.home{
+    height: 100vh;
+    width: 100vw;
     display: flex;
+    .esq{
+        height: 100vh;
+        width: 50%;
+        display: flex;
+        border: black 1rem solid;
+        .logo{
+            display: flex;
+            height: 100%;
+            width: 90%;
+            img{
+                margin:auto;
+            }
+        }
+        .text{
+            width: 10%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            
+            p{
+                font-size: 2rem;
+                writing-mode: tb-rl;
+                text-align: center;
+                transform: rotate(-180deg);
+                color: white;
+            }
+        }
+    }
+    .drt{
+        height: 100vh;
+        width: 50%;
+    }
 }
+
+
