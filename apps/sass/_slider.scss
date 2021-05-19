@@ -1,0 +1,40 @@
+.slider{
+    display: flex;
+    article{
+        width: 45rem;
+        height: 100%;
+        a{
+            text-decoration: none;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 6rem;
+            transition: background-color ease 0.5s;
+            border-right: solid 0.1rem black;
+            .slider_content{
+                .slider_img{
+                width: 33rem;
+                margin: 0 auto;
+            }
+                p{
+                    color:black;
+                }
+            }
+
+            .plus{
+                opacity: 0;
+                transition: opacity 0.4s cubic-bezier(.32,.24,.15,1);
+            }
+
+            &:hover{
+                background-color: burlywood;
+                .plus{
+                    opacity: 1;
+                }
+            }
+            
+        }
+    }
+}

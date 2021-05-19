@@ -1,0 +1,25 @@
+.about{
+    display: flex;
+    position: relative;
+    .about-us{
+        width: 72rem;
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        h2{
+
+        }
+        img{
+            position: absolute;
+            right: 21rem;
+            top:30%;
+        }
+        p{
+
+        }
+    }
+    .about-back{
+        width: 34rem;
+        background-color: chocolate;
+    }
+}

@@ -1,0 +1,24 @@
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+main{
+    display: flex;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
