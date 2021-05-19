@@ -1,11 +1,6 @@
-html{
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
 .home{
     height: 100vh;
-    width: 100vw;
+    min-width: 100vw; // tenho de dizer min ou ele encolhe
     display: flex;
     .esq{
         height: 100vh;
@@ -39,7 +34,7 @@ html{
     .drt{
         height: 100vh;
         width: 50%;
+        background-color: lightcoral;
+        transition: background-color ease 0.5s;
     }
 }
-
-
