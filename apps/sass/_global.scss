@@ -2,23 +2,34 @@ html{
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow: scroll;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    
+    @media (min-width:1200px) 
+    {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 }
 main{
     display: flex;
+    flex-direction: column;
     height: 100%;
+    @media (min-width:1200px) 
+    {
+        flex-direction: row;
+    }
 }
-
-
-
-
-
-
-
-
-
+/*
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0;  /* Remove scrollbar space 
+    background: transparent;  /* Optional: just make scrollbar invisible 
 }
+*/
+
+/*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
+
+*/

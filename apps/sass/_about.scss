@@ -1,25 +1,40 @@
 .about{
     display: flex;
     position: relative;
+    height: 53rem;
     .about-us{
         width: 72rem;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: column;
         display: flex;
         h2{
 
         }
         img{
+            display: none;
             position: absolute;
             right: 21rem;
             top:30%;
+            @media (min-width: 1200px){
+                    display:block;
+            }
         }
         p{
 
         }
+        @media (min-width: 1200px){
+            justify-content: space-between;
+    }
     }
     .about-back{
+        display: none;
         width: 34rem;
         background-color: chocolate;
+        @media (min-width: 1200px){
+            display:block;
+        }
+    }
+    @media (min-width: 1200px){
+        height: 100vh;
     }
 }
