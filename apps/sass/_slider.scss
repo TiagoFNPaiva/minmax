@@ -1,24 +1,40 @@
 .slider{
     display: flex;
+    flex-direction: column;
     article{
-        width: 45rem;
+        width: 100vw;
         height: 100%;
         a{
             text-decoration: none;
-            height: 100vh;
+            height: 64rem;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: space-between;
-            padding: 6rem;
+            padding: 1rem;
             transition: background-color ease 0.5s;
-            border-right: solid 0.1rem black;
+            @media (min-width:1200px) 
+            {
+                padding: 6rem;
+                height: 100vh;
+                border-right: solid 0.1rem black;
+            }
             .slider_content{
                 .slider_img{
-                width: 33rem;
-                margin: 0 auto;
+                width: 75%;
+                margin: 0 auto 10rem;
+                @media (min-width:1200px) 
+                {
+                    width: 80%;
+                }
+                @media (min-width:1440px) 
+                {
+                    width: 33rem;
+                }
             }
                 p{
+                    width: 75%;
+                    margin: 0 auto;
                     color:black;
                 }
             }
@@ -36,5 +52,17 @@
             }
             
         }
+        @media (min-width:1200px) 
+        {
+            width: 40rem;
+        }
+        @media (min-width:1400px) 
+        {
+            width: 45rem;
+        }
+    }
+    @media (min-width:1200px) 
+    {
+        flex-direction: row;
     }
 }

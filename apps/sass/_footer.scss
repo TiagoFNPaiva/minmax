@@ -1,13 +1,13 @@
 .footer{
-    height: 100vh;
+    height: 70vh;
     display: flex;
     .text{
-        height: 100vh;
-        width: 10rem;
+        height:100%;
+        width: 10%;
         background-color: black;
         display: flex;
         justify-content: center;
-        padding: 1rem;
+        //padding: 1rem;
         
         p{
             font-size: 2rem;
@@ -16,30 +16,43 @@
             transform: rotate(-180deg);
             color: white;
         }
+
+        @media (min-width:1200px) 
+        {
+            height: 100vh;
+            width: 10rem;
+            padding: 1rem;
+        }
     }
     .info{
-        width: 72rem;
-
+        width: 90%;
+        height: 100%;
         .cover{
             margin:2rem;
             background-color: black;
 
             display: flex;
             flex-direction: column;
-            //justify-content: space-around;
+            justify-content: center;
 
-            height:90%;
-            padding: 20rem 20rem 5.5rem;
+            height:calc(90% - 4rem);
+            padding: 4rem 4rem 1rem;
             &>*{
-                margin-bottom: 8rem;
+                margin-bottom: 1rem;
             }
             .logo{
-                width: 28rem;
-                height: 28rem;
+                width: 60%;
+                //height: 10rem;
+                padding: 2rem;
+                margin: 0 auto;
                 background-color: white;
 
                 display: flex;
-                
+                @media (min-width:1200px) 
+                {
+                    width: 28rem;
+                    height: 28rem;
+                }
                 img{
                     width: 90%;
                     margin:auto;
@@ -49,20 +62,47 @@
 
             .news{
                 background-color: white;
-                width: 28rem;
-                height: 4rem;
+                width: 60%;
+                margin: 4rem auto;
+                height: 1.5rem;
+                @media (min-width:1200px) 
+                {
+                    margin: 0 auto;
+                    width: 28rem;
+                    height: 4rem;
+                }
             }
 
             .social{
                 display: flex;
                 justify-content: space-between;
-                width: 28rem;
+
+                width: 60%;
+                margin: 0 auto;
                 div{
-                    width: 4rem;
+                    width: 10%;
                     background-color: white;
-                    height: 4rem;
+                    height: 2rem;
                     border-radius: 50%;
+                    @media (min-width:1200px) 
+                {
+                    width: 4rem;
+                    height: 4rem;
                 }
+                }
+                @media (min-width:1200px) 
+                {
+                    width: 28rem;
+                }
+            }
+            @media (min-width:1200px) 
+            {
+                //padding: 20rem 20rem 5.5rem;
+                &>*{
+                margin-bottom: 8rem;
+                }
+                height:calc(90% - 4rem);
+                justify-content: space-around;
             }
         }
         .copyright{
@@ -70,5 +110,14 @@
 
             height: 10%;
         }
+        @media (min-width:1200px) 
+        {
+            width: 72rem;
+        }
+    }
+    @media (min-width:1200px) 
+    {
+        
+        height: 100vh;
     }
 }
