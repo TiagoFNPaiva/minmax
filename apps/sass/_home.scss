@@ -7,7 +7,7 @@
         height: 40rem;
         width: 100%;
         display: flex;
-        border: black 1rem solid;
+        //border: black 1rem solid;
         @media (min-width: 1200px){
             height: 100vh;
             width: 50%;
@@ -16,20 +16,27 @@
         .logo{
             display: flex;
             height: 100%;
-            width: 90%;
+            width: 85%;
+            background-image: url(../images/Logo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
             img{
-                margin:auto;
+                //margin:auto;
             }
         }
         .text{
-            width: 10%;
+            width: 15%;
             background-color: black;
             display: flex;
             justify-content: center;
             padding: 1rem;
             
             p{
-                font-size: 1rem;
+                font-family: 'retro';
+                font-size: 2rem;
+                line-height: 4rem;
                 writing-mode: tb-rl;
                 text-align: center;
                 transform: rotate(-180deg);
