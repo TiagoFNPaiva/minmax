@@ -32,17 +32,53 @@
             display: flex;
             justify-content: center;
             padding: 1rem;
+            transform: rotate(-180deg);
+            &:hover p{
+                animation: glitch3 2.5 linear infinite;
+
+                &:nth-child(2) {
+                    animation: glitch2 2.5s infinite;
+                  }
+                &:nth-child(3) {
+                    animation: glitch1 2.5s infinite;
+                }
+            } 
+            position: relative;
+
             
             p{
                 font-family: 'retro';
                 font-size: 2rem;
-                line-height: 4rem;
+
+                position: absolute;
+                top: 25%;
+
+                //top:24.9%;
+                //left:31%;
+
                 writing-mode: tb-rl;
                 text-align: center;
-                transform: rotate(-180deg);
-                color: white;
+                
+                color: #f16f6f;
+                
+
                 @media (min-width: 1200px){
                     font-size: 2rem;
+                }
+                
+                &:nth-child(2) {
+                    color: #67f3da;
+                    top:25%;
+
+                    //top:25.1%;
+                    //left:29%;
+                  }
+                  
+                &:nth-child(3) {
+                    color: white;
+                    top:25%;
+
+                    //left:30%;
                 }
             }
         }

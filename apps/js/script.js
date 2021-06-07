@@ -1,9 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
     setInterval(rotateC, 2000);
-    scrollInit();
+    /*scrollInit();
     window.addEventListener("resize", function () {
         scrollInit();
-    }, true);
+    }, true);*/
 })
 
 const item = document.getElementsByTagName("html")[0]
