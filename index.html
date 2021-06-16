@@ -162,34 +162,13 @@
         </div>
     </main>
 
-
+    <div id="canvas"></div>
 </body>
-<script src="apps/js/script.js"></script>
+
 
 <script src="apps/js/locomotive-scroll.min.js"></script>
-<script>
+<!--<script src="apps/js/curtains.umd.js"></script>-->
+<script src="apps/js/script.js"></script>
 
-    const scroller = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-        direction: "horizontal"
-    });
-
-
-    const map = (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c;
-    const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
-
-    let scroll = { cache: 0, current: 0 };
-    const allImgs = [...document.querySelectorAll('.slider_img')];
-    scroller.on('scroll', (obj) => {
-        scroll.current = obj.scroll.x;
-        const distance = scroll.current - scroll.cache;
-        scroll.cache = scroll.current;
-        const skewVal = map(distance, -50, 50, -15, 15);
-        allImgs.forEach(el => el.style.transform = 'skewX(' + clamp(skewVal, -15, 15) + 'deg)');
-        //allImgs.forEach(el => el.style.transform = 'skewY(' + clamp(skewVal, -20, 20) + 'deg)');
-    });
-    scroller.update();
-</script>
 
 </html>

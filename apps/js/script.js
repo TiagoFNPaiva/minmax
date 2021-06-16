@@ -1,32 +1,15 @@
 window.addEventListener("DOMContentLoaded", () => {
     setInterval(rotateC, 2000);
-    /*scrollInit();
+    scrollH(smoothScroll);
+
     window.addEventListener("resize", function () {
-        scrollInit();
-    }, true);*/
+        window.location.href = window.location.href;
+    }, true);
 })
+
 
 const item = document.getElementsByTagName("html")[0]
 
-/* SCROLL HORIZONTAL*/
-
-const scrollH = (event) => {
-    if (event.deltaY > 0) item.scrollLeft += 400;
-    else item.scrollLeft -= 400;
-}
-
-const scrollInit = () => {
-    if (window.innerWidth >= 1200) {
-        window.removeEventListener('wheel', scrollH, true);
-        window.addEventListener('wheel', scrollH, true);
-    }
-    else {
-        window.removeEventListener('wheel', scrollH, true);
-    }
-}
-
-
-/* Imagens a rodar home*/
 
 const rotate = document.getElementsByClassName("drt")[0]
 
@@ -37,3 +20,36 @@ const rotateC = () => {
     //console.log(a)
     rotate.style.backgroundColor = color[a]
 }
+
+
+/////////// LOCOMOTIVE  ////////////
+const smoothScroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    direction: "horizontal",
+    //inertia: 0.5
+});
+
+const scrollH = (scroller) => {
+
+    if (window.innerWidth < 1200) {
+        scroller.destroy()
+    }
+    else {
+        scroller.start()
+
+        const map = (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c;
+        const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
+        let scroll = { cache: 0, current: 0 };
+        const allImgs = [...document.querySelectorAll('.slider_img')];
+        scroller.on('scroll', (obj) => {
+            scroll.current = obj.scroll.x;
+            const distance = scroll.current - scroll.cache;
+            scroll.cache = scroll.current;
+            const skewVal = map(distance, -50, 50, -15, 15);
+            allImgs.forEach(el => el.style.transform = 'skewX(' + clamp(skewVal, -15, 15) + 'deg)');
+        });
+        scroller.update();
+    }
+}
+
