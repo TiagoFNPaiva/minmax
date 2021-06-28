@@ -20,22 +20,36 @@
                 border-right: solid 0.1rem black;
             }
             .slider_content{
+                text-align: center;
                 .slider_img{
                 width: 75%;
-                margin: 0 auto 10rem;
+                height: 55vh;
+                margin: 0 auto 3rem;
+                
                 @media (min-width:1200px) 
                 {
-                    width: 80%;
+                    width: 100%;
                 }
                 @media (min-width:1440px) 
                 {
-                    width: 33rem;
+                    //width: 33rem;
                 }
-            }
+                }
+                h3{
+                    font-family: 'Cairo';
+                    text-align: left;
+                    font-size: 2.8rem;
+                    color:black;
+                    margin-bottom: 2.5rem;
+                }
                 p{
-                    width: 75%;
+                    width: 100%;
                     margin: 0 auto;
                     color:black;
+                    text-align: left;
+                    font-family: 'Source';
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
                 }
             }
 
@@ -45,20 +59,26 @@
             }
 
             &:hover{
-                background-color: burlywood;
+                background-color: black;
                 .plus{
                     opacity: 1;
+                }
+                p{
+                    color:white
+                }
+                h3{
+                    color:white
                 }
             }
             
         }
         @media (min-width:1200px) 
         {
-            width: 40rem;
+            width: 45rem;
         }
         @media (min-width:1400px) 
         {
-            width: 45rem;
+            //width: 45rem;
         }
     }
     @media (min-width:1200px) 

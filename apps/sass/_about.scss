@@ -7,8 +7,14 @@
         justify-content: space-evenly;
         flex-direction: column;
         display: flex;
+        background-color: black;
         h2{
-
+            font-family: 'Cairo';
+            text-align: left;
+            font-size: 4rem;
+            line-height: 5.2rem;
+            color:white;
+            padding: 7.2rem ;
         }
         img{
             display: none;
@@ -20,7 +26,12 @@
             }
         }
         p{
-
+            text-align: left;
+            font-family: 'Source';
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color:white;
+            padding:  7.2rem 7.2rem 6rem;
         }
         @media (min-width: 1200px){
             justify-content: space-between;

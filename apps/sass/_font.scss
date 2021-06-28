@@ -6,3 +6,20 @@
         url('../css/fonts/PressStart2P.woff') format('woff'),
         url('../css/fonts/PressStart2P.tff') format('truetype');
 }
+
+@font-face {
+    font-display: swap;
+    font-family: 'cairo';
+    font-weight: 600;
+    src:url('../css/fonts/Cairo.woff2') format('woff2'),
+        url('../css/fonts/Cairo.woff') format('woff'),
+        url('../css/fonts/Cairo.tff') format('truetype');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'source';
+    font-weight: 400;
+    src:url('../css/fonts/Source.woff2') format('woff2'),
+        url('../css/fonts/Source.woff') format('woff'),
+        url('../css/fonts/Source.tff') format('truetype');
+}
