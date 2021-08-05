@@ -1,0 +1,12 @@
+{
+    "name": "minmax",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "4.13.3"
+    },
+    "author": "Tiago Paiva / Sergio Carvalho",
+    "license": "ISC"
+}
