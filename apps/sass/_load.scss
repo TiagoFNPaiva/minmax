@@ -1,10 +1,9 @@
 #loader {
     width: 100vw;
     height: 100vh;
-    
     background-color: rgb(50, 50, 50);
     img{
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -17,7 +16,11 @@
 
 .loading{
     visibility: hidden;
+    height: 100vw;
+    overflow-y: hidden;
 }
 .loaded{
     visibility: visible;
+    height: unset;
+    overflow-y: unset;
 }
