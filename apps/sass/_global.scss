@@ -3,7 +3,7 @@ html{
     font-size: 62.5%;
     overflow: scroll;
     
-    @media (min-width:1200px) 
+    @media (min-width:1024px) 
     {
         overflow-x: hidden;
         overflow-y: hidden;
@@ -13,7 +13,7 @@ html{
     display: flex;
     flex-direction: column;
     height: 100%;
-    @media (min-width:1200px) 
+    @media (min-width:1024px) 
     {
         flex-direction: row;
     }
@@ -185,6 +185,23 @@ html{
       opacity: 0.25;
     }
 }
+
+@keyframes rotate {
+  0%{
+    transform: rotateY(0deg);
+  }
+  50%{
+    transform: rotateY(90deg);
+  }
+  100%{
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+
+
 /*
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space 

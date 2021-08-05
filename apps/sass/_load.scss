@@ -1,0 +1,23 @@
+#loader {
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgb(50, 50, 50);
+    img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        animation: rotate 2s linear infinite;
+    }
+}
+
+
+.loading{
+    visibility: hidden;
+}
+.loaded{
+    visibility: visible;
+}

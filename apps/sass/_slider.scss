@@ -6,14 +6,14 @@
         height: 100%;
         a{
             text-decoration: none;
-            height: 64rem;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: space-between;
-            padding: 1rem;
+            padding: 8vw;
             transition: background-color ease 0.5s;
-            @media (min-width:1200px) 
+            @media (min-width:1024px) 
             {
                 padding: 6rem;
                 height: 100vh;
@@ -21,26 +21,53 @@
             }
             .slider_content{
                 text-align: center;
-                .slider_img{
-                width: 75%;
-                height: 55vh;
-                margin: 0 auto 3rem;
-                
-                @media (min-width:1200px) 
-                {
+                .pic_container{
+                    overflow: hidden;
                     width: 100%;
-                }
-                @media (min-width:1440px) 
-                {
-                    //width: 33rem;
-                }
+                    height: 55vh;
+                    padding: 0.4rem;
+                    background: linear-gradient(#F36AFF , #183EC5 60%, #18C5BA 100%);
+
+                    @media (min-width:1024px) 
+                    {
+                        padding: 0;
+                        background: none;
+                        &:hover{
+                            padding: 0.4rem;
+                            background: linear-gradient(#F36AFF , #183EC5 60%, #18C5BA 100%);
+                         }
+                    }
+                    
+                    
+                    
+                    .slider_img{
+                
+                        width: 100%;
+                        height: 54.1vh;
+                        margin: 0 auto 3rem;
+                        
+                        
+                        @media (min-width:1024px) 
+                        {
+                            width: 100%;
+                        }
+                        @media (min-width:1440px) 
+                        {
+                            //width: 33rem;
+                        }
+                    }
                 }
                 h3{
                     font-family: 'Cairo';
                     text-align: left;
                     font-size: 2.8rem;
                     color:black;
-                    margin-bottom: 2.5rem;
+                    margin-top: 1.6rem;
+                    margin-bottom: 1.5rem;
+                    @media (min-width:1024px) 
+                    {
+                        margin-bottom: 2rem;
+                    }
                 }
                 p{
                     width: 100%;
@@ -49,20 +76,20 @@
                     text-align: left;
                     font-family: 'Source';
                     font-size: 1.6rem;
-                    line-height: 2.2rem;
+                    line-height: 2rem;
+                    @media (min-width:1024px) 
+                    {
+                        line-height: 2.2rem;
+                    }
                 }
             }
-
+        }
+        &:nth-child(2n){
+            background-color: black;
             .plus{
-                opacity: 0;
-                transition: opacity 0.4s cubic-bezier(.32,.24,.15,1);
+                opacity: 1;
             }
-
-            &:hover{
-                background-color: black;
-                .plus{
-                    opacity: 1;
-                }
+            .slider_content{
                 p{
                     color:white
                 }
@@ -70,18 +97,17 @@
                     color:white
                 }
             }
-            
         }
-        @media (min-width:1200px) 
+        @media (min-width:1024px) 
         {
             width: 45rem;
         }
-        @media (min-width:1400px) 
+        @media (min-width:1801px) 
         {
-            //width: 45rem;
+            
         }
     }
-    @media (min-width:1200px) 
+    @media (min-width:1024px) 
     {
         flex-direction: row;
     }

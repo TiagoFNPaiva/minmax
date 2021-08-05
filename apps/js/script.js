@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    setInterval(rotateC, 2000);
+    //setInterval(rotateC, 2000);
     scrollH(smoothScroll);
 
     window.addEventListener("resize", function () {
@@ -7,29 +7,30 @@ window.addEventListener("DOMContentLoaded", () => {
     }, true);
 
     const local = document.querySelectorAll('.pixi')
-    Array.from(local).forEach(element => new glitch(element));
+    Array.from(local).forEach((element, i) => new glitch(element, imagesArr[i]));
 
     const box = document.querySelectorAll('.pixi');
-    document.addEventListener('wheel', function () {
-        Array.from(box).forEach(element => isInViewport(element) ? element.style.filter = "grayscale(0)" : element.style.filter = "grayscale(1)")
-    }, {
-        passive: true
-    });
+    if (window.outerWidth > 1280) {
+        document.addEventListener('wheel', function () {
+            Array.from(box).forEach(element => isInViewport(element) ? element.style.filter = "grayscale(0)" : element.style.filter = "grayscale(1)")
+        }, {
+            passive: true
+        });
+    }
 })
+
+//const
+
+const date = new Date();
+const copyright = document.getElementById("copyright_text")
+copyright.innerHTML += ` ${date.getFullYear()}`
+
+const imagesArr = ['images/image_services_branding.png', 'images/image_services_website.png', 'images/image_services_social-media.png', 'images/image_services_gaming.png', 'images/image_services_illustration.png']
 
 
 const item = document.getElementsByTagName("html")[0]
 
 
-const rotate = document.getElementsByClassName("drt")[0]
-
-const color = ['red', 'blue', 'green', 'yellow', 'grey', 'brown']
-
-const rotateC = () => {
-    let a = Math.floor(Math.random() * color.length)
-    //console.log(a)
-    rotate.style.backgroundColor = color[a]
-}
 
 /* SCROLL HORIZONTAL
 
@@ -53,7 +54,7 @@ const smoothScroll = new LocomotiveScroll({
 
 const scrollH = (scroller) => {
 
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1024) {
         scroller.destroy()
     }
     else {
@@ -80,23 +81,18 @@ function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
         rect.top >= 0 &&
-        rect.left >= 0 &&
+        rect.left >= (window.innerWidth - (window.innerWidth / 1.05) || document.documentElement.clientWidth - (document.documentElement.clientWidth / 1.05)) &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth / 1.20 || document.documentElement.clientWidth / 1.20)
+        rect.right <= (window.innerWidth / 1.0 || document.documentElement.clientWidth / 1.0)
 
     );
 }
-
-
-
-
-
 
 /* Glitch*/
 
 class glitch {
 
-    constructor(props) {
+    constructor(props, imageSrc) {
         //console.log(props)
         const canvas = props
 
@@ -106,7 +102,7 @@ class glitch {
 
 
         var myImage = new Image();
-        myImage.src = 'images/image1.png';
+        myImage.src = imageSrc;
 
 
         const app = new PIXI.Application({
@@ -160,7 +156,7 @@ class glitch {
         const THAT = this
 
         const tl = gsap.timeline({
-            delay: this.randomIntFromInterval(0, 1),
+            delay: this.randomIntFromInterval(0, 3),  /*Timers*/
             onComplete: this.anim
         })
 

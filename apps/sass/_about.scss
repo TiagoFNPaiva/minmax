@@ -1,9 +1,9 @@
 .about{
     display: flex;
     position: relative;
-    height: 53rem;
+    height: 100vh;
     .about-us{
-        width: 72rem;
+        width: 100vw;
         justify-content: space-evenly;
         flex-direction: column;
         display: flex;
@@ -11,41 +11,89 @@
         h2{
             font-family: 'Cairo';
             text-align: left;
-            font-size: 4rem;
-            line-height: 5.2rem;
+            font-size: 3rem;
+            line-height: 3rem;
             color:white;
-            padding: 7.2rem ;
+            padding: 2rem ;
+
+            @media (min-width: 1024px){
+                font-size: 4rem;
+                line-height: 5.2rem;
+                padding: 7.2rem ;
+            }
+
+            /*-----------------------------*/  
+            //TESTE
+            background: linear-gradient(#F36AFF , #183EC5 60%, #18C5BA 100%);
+            background-size: 300% 300%;
+            background-clip: text;
+            color: transparent;
+            animation: gradient 5s linear infinite alternate;
+            @keyframes gradient {
+                0% {
+                  background-position:100% 0% ;
+                }
+                100% {
+                  background-position: 100% 100%;
+                }
+              }
+            /*-----------------------------*/  
         }
-        img{
-            display: none;
-            position: absolute;
-            right: 21rem;
-            top:30%;
-            @media (min-width: 1200px){
-                    display:block;
+        .logo_container{
+            /*
+            padding:0.4rem;
+            margin: 0 auto;
+            background: linear-gradient(#F36AFF , #183EC5 60%, #18C5BA 100%);
+            */
+            
+            @media (min-width: 1024px){
+                position: absolute;
+                top:33%;
+                left:50%;
+            }
+            img{
+                width: 40vw;
+                display: block;
+                margin:0 auto;
+                @media (min-width: 1024px){
+                        width: 34rem;
+                        display:block;
+                }
             }
         }
+        
         p{
             text-align: left;
             font-family: 'Source';
             font-size: 1.6rem;
             line-height: 2.2rem;
             color:white;
-            padding:  7.2rem 7.2rem 6rem;
+            padding:  2rem;
+            @media (min-width: 1024px){
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                color:white;
+                padding:  7.2rem 7.2rem 6rem;
+            }
         }
-        @media (min-width: 1200px){
+        @media (min-width: 1024px){
+            width: 72rem;
             justify-content: space-between;
     }
     }
     .about-back{
         display: none;
         width: 34rem;
-        background-color: chocolate;
-        @media (min-width: 1200px){
+        background-image: url(../images/about_2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        box-shadow: inset 1rem 0rem 2rem rgba(0,0,0,0.60);
+        @media (min-width: 1024px){
             display:block;
         }
     }
-    @media (min-width: 1200px){
+    @media (min-width: 1024px){
         height: 100vh;
     }
 }

@@ -1,6 +1,8 @@
 .footer{
-    height: 70vh;
+    height: 100vh;
     display: flex;
+
+    
     .text{
         height:100%;
         width: 10%;
@@ -8,116 +10,152 @@
         display: flex;
         justify-content: center;
         //padding: 1rem;
+        transform: rotate(-180deg);
         
+        &:hover p{
+            animation: glitch3 2.5 linear infinite;
+
+            &:nth-child(2) {
+                animation: glitch2 2.5s infinite;
+              }
+            &:nth-child(3) {
+                animation: glitch1 2.5s infinite;
+            }
+        } 
+        position: relative;
         p{
+            font-family: 'retro';
             font-size: 2rem;
             writing-mode: tb-rl;
             text-align: center;
-            transform: rotate(-180deg);
-            color: white;
+            
+            color: #f16f6f;
+
+            position: absolute;
+            top: 35%;
+            &:nth-child(2) {
+                color: #67f3da;
+                top:35%;
+
+                //top:25.1%;
+                //left:29%;
+              }
+              
+            &:nth-child(3) {
+                color: white;
+                top:35%;
+
+                //left:30%;
+            }
         }
 
-        @media (min-width:1200px) 
+        @media (min-width:1024px) 
         {
             height: 100vh;
             width: 10rem;
-            padding: 1rem;
+
         }
     }
-    .info{
-        width: 90%;
-        height: 100%;
-        .cover{
-            margin:2rem;
-            background-color: black;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            height:calc(90% - 4rem);
-            padding: 4rem 4rem 1rem;
-            &>*{
-                margin-bottom: 1rem;
-            }
-            .logo{
-                width: 60%;
-                //height: 10rem;
-                padding: 2rem;
-                margin: 0 auto;
-                background-color: white;
-
-                display: flex;
-                @media (min-width:1200px) 
-                {
-                    width: 28rem;
-                    height: 28rem;
-                }
-                img{
-                    width: 90%;
-                    margin:auto;
-                }
-                
-            }
-
-            .news{
-                background-color: white;
-                width: 60%;
-                margin: 4rem auto;
-                height: 1.5rem;
-                @media (min-width:1200px) 
-                {
-                    margin: 0 auto;
-                    width: 28rem;
-                    height: 4rem;
-                }
-            }
-
-            .social{
-                display: flex;
-                justify-content: space-between;
-
-                width: 60%;
-                margin: 0 auto;
-                div{
-                    width: 10%;
-                    background-color: white;
-                    height: 2rem;
-                    border-radius: 50%;
-                    @media (min-width:1200px) 
-                {
-                    width: 4rem;
-                    height: 4rem;
-                }
-                }
-                @media (min-width:1200px) 
-                {
-                    width: 28rem;
-                }
-            }
-            @media (min-width:1200px) 
-            {
-                //padding: 20rem 20rem 5.5rem;
-                &>*{
-                margin-bottom: 8rem;
-                }
-                height:calc(90% - 4rem);
-                justify-content: space-around;
-            }
-        }
-        .copyright{
-            background-color: yellowgreen;
-
-            height: 10%;
-        }
-        @media (min-width:1200px) 
-        {
-            width: 72rem;
-        }
-    }
-    @media (min-width:1200px) 
+    
+    @media (min-width:1024px) 
     {
         
         height: 100vh;
     }
+    
+    .info{
+        background-image: url(../images/footer_back.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+
+        width: 90%;
+        height: 100%;
+        @media (min-width:1024px) 
+        {
+            width: 72rem;
+        }
+        
+        .footer_container{/*
+            background: linear-gradient(#F36AFF , #183EC5 60%, #18C5BA 100%);
+            border-radius: 50%;
+            width: 34.3rem;
+            height: 34.3rem;*/
+            height: calc(100% - 5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: inset 0rem -1rem 2rem rgba(0,0,0,0.40);
+            &:hover{
+                .footer_container_logo{
+                    animation: rotate 2s linear infinite;
+                }
+            }
+            .footer_container_logo{
+                width: 90%;
+                
+                margin: 0 auto 2.5rem;
+                @media (min-width:1024px){
+                    margin: 0 auto 5rem;
+                    height: 40rem;
+                    width: 40rem;
+                }
+                img{
+                    margin: 0 auto;
+                }
+            }
+           .footer_container_links{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 80%;
+                max-width: 40rem;
+                margin: 0 auto;
+                a{
+                    //flex: 0 0 50%;
+                    &:nth-child(3){
+                        flex: 0 0 100%;
+                        @media (min-width:1024px){
+                            //width: 40rem;
+                            flex: none
+                        }
+                    }
+                    
+                    transition: transform 0.3s ease;
+                    &:hover{
+                       transform: scale(1.2);
+                    }
+                    img{
+                        margin: 0 auto;
+                        height: 6rem;
+                        width: 6rem;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.30);
+                    }
+                }
+                @media (min-width:1024px){
+                    flex-wrap: nowrap;
+                    width: 40rem;
+                }
+           }
+        }
+        .copyright{
+            height: 5rem;
+            width: 100%;
+            background-image: url(../images/copyrigth_back.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                color: white;
+                font-family: 'Source';
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
+    
 }

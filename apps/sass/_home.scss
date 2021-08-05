@@ -1,14 +1,14 @@
 .home{
-    height: 74rem;
+    height: 95vh;
     min-width: 100vw; // tenho de dizer min ou ele encolhe
     display: flex;
     flex-direction: column;
     .esq{
-        height: 40rem;
+        height: 95vh;
         width: 100%;
         display: flex;
         //border: black 1rem solid;
-        @media (min-width: 1200px){
+        @media (min-width: 1024px){
             height: 100vh;
             width: 50%;
 
@@ -16,18 +16,23 @@
         .logo{
             display: flex;
             height: 100%;
-            width: 85%;
+            width: 100%; // 85%
             background-image: url(../images/Logo.png);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 105% 100%;
             background-position: center;
-
+            @media (min-width: 1200px){
+                background-size: cover;
+            }
+            @media (min-width: 1400px){
+                background-image: url(../images/Logo_big.png);
+            }
             img{
                 //margin:auto;
             }
         }
         .text{
-            width: 15%;
+            width: 0%; // verificar depois 15%
             background-color: white;
             display: flex;
             justify-content: center;
@@ -62,7 +67,7 @@
                 color: #f16f6f;
                 
 
-                @media (min-width: 1200px){
+                @media (min-width: 1024px){
                     font-size: 2rem;
                 }
                 
@@ -84,17 +89,23 @@
         }
     }
     .drt{
+        display: none;
         height: 34rem;
         width: 100%;
-        background-color: lightcoral;
-        transition: background-color ease 0.5s;
-        @media (min-width: 1200px){
+        background-image: url(../images/home_2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        //transition: background-color ease 0.5s;
+        box-shadow: inset 1rem 0rem 2rem rgba(0,0,0,0.60);
+        @media (min-width: 1024px){
+            display: block;
             height: 100vh;
             width: 50%;
 
         }
     }
-    @media (min-width: 1200px){
+    @media (min-width: 1024px){
         height: 100vh;
         flex-direction: row;
     }
