@@ -28,6 +28,10 @@
             background-size: 300% 300%;
             background-clip: text;
             color: transparent;
+            -webkit-animation: gradient 5s linear infinite alternate;
+            -moz-animation: gradient 5s linear infinite alternate;
+            -ms-animation: gradient 5s linear infinite alternate;
+            -o-animation: gradient 5s linear infinite alternate;
             animation: gradient 5s linear infinite alternate;
             @keyframes gradient {
                 0% {
