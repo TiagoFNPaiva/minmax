@@ -1,11 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
     //setInterval(rotateC, 2000);
     scrollH(smoothScroll);
-
+    /*
     window.addEventListener("resize", function () {
         window.location.href = window.location.href;
     }, true);
-
+    */
     const local = document.querySelectorAll('.pixi')
     Array.from(local).forEach((element, i) => new glitch(element, imagesArr[i]));
 
