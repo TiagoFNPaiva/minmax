@@ -2,6 +2,14 @@ html{
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow: scroll;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
     
     @media (min-width:1024px) 
     {
