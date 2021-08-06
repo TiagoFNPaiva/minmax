@@ -11,6 +11,14 @@
         justify-content: center;
         //padding: 1rem;
         transform: rotate(-180deg);
+
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
         
         &:hover p{
             animation: glitch3 2.5 linear infinite;
@@ -111,7 +119,7 @@
                 width: 80%;
                 max-width: 40rem;
                 margin: 0 auto;
-                a{
+                .link_container{
                     //flex: 0 0 50%;
                     &:nth-child(3){
                         flex: 0 0 100%;
