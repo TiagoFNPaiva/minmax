@@ -3,6 +3,7 @@
     min-width: 100vw; // tenho de dizer min ou ele encolhe
     display: flex;
     flex-direction: column;
+    background-color: black;
     .esq{
         height: 95vh;
         width: 100%;
@@ -92,7 +93,9 @@
         display: none;
         height: 34rem;
         width: 100%;
-        background-image: url(../images/home_2.png);
+        background-color: black;
+        //background-image: url(../images/home_2.png);
+        background-image: url(../images/minmax_gif2.gif);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;

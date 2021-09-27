@@ -94,11 +94,7 @@
             flex-direction: column;
             justify-content: center;
             box-shadow: inset 0rem -1rem 2rem rgba(0,0,0,0.40);
-            &:hover{
-                .footer_container_logo{
-                    animation: rotate 2s linear infinite;
-                }
-            }
+            
             .footer_container_logo{
                 width: 90%;
                 

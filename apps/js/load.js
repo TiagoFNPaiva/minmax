@@ -1,3 +1,4 @@
+
 document.onreadystatechange = function () {
     if (document.readyState === "complete") {
         document.getElementById(
@@ -8,3 +9,4 @@ document.onreadystatechange = function () {
             "body")[0].classList.remove('loading')
     }
 };
+
